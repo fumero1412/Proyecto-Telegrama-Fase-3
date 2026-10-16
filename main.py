@@ -14,7 +14,7 @@ GRUPO_DESTINO = -1003764262854 # a donde copias
 TOPIC_ID = 735493 # tu tema, si no tienes tema pon None
 # ------------------------------
 
-app = Flask(name)
+app = Flask(__name__)
 @app.route('/')
 def home(): return "Bot vivo"
 threading.Thread(target=lambda: app.run(host='0.0.0.0', port=8080), daemon=True).start()
